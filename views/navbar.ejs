@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calltaxi.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Navbar</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-white">
+        <div class="container-fluid">
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-50 justify-content-center">
+                    <li class="nav-item ms-5">
+                        <img src="image 1(1).png">
+                    </li>
+                </ul>
+                <form class="d-flex w-100 justify-content-end" role="search">
+                    <div>
+                        <button class="d-flex justify-content-evenly" id="top-phone-btn" onclick="callTaxi()">
+                            <div class="mt-3">
+                                <i class="fa-solid fa-headset fs-5 bg-none"></i>
+                            </div>
+                            <div>
+                                <span class="fw-semibold">24/7Customer Care</span><br>
+                                <span>867563543</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="ms-3">
+                        <button class="d-flex justify-content-center" id="top-location-btn" onclick="gMap()">
+                            <div class="mt-2">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span class="fw-semibold mt-2 ms-2">Nagercoil,Kanyakumari</span>
+                        </button>
+                    </div>
+                    <div class="ms-3">
+                        <img src="Ellipse 1.png">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="navbar" class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav w-50 text-black fw-semibold justify-content-around ms-5">
+                    <a class="nav-link" href="#">
+                        <span id="atagH">Home</span>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <span id="atagS">Services</span>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <span id="atagV">Vehicles</span>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <span id="atagB">Blogs</span>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <span id="atagA">About Us</span>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <span id="atagC">Contact Us</span>
+                    </a>
+                </div>
+                <div class="w-50 d-flex justify-content-end">
+                    <button id="bookNow-btn" class="fw-semibold">Book Now
+                        <img src="Vector(8).png">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+<script src="calltaxi.js"></script>
+
+</html>

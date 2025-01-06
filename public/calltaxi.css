@@ -1,0 +1,281 @@
+
+#top-phone-btn{
+    border-style: dashed;
+    background: none;
+    width: 225px;
+    border-radius: 8px;
+}
+#top-phone-btn:hover{
+    background-color: #FF9D40;
+    color: #ffffff;
+}
+#top-location-btn{
+    border-style: dashed;
+    background: none;
+    width: 225px;
+    border-radius: 8px;
+    height: 50px;
+}
+#top-location-btn:hover{
+    background-color: #FF9D40;
+    color: #ffffff;
+}
+#navbar{
+    background-color: #FF9D40;
+    position: sticky;
+  top: 0.1px;
+  z-index: 5;
+}
+#bookNow-btn{
+    background-color: #422425;
+    border: none;
+    color: white;
+    height: 50px;
+    border-radius: 6px;
+    width: 135px;
+    margin-right:20%;
+}
+#bookNow-btn:hover{
+    background-color: #ffffff;
+    color: #422425;
+}
+#footerBg-color{
+    background-color: #FF9D40;
+}
+#footer-row{
+    width: 100%;
+}
+#footer-col1-detail{
+    margin-top: 15px;
+    color: #000000;
+    font-size: 13px;
+    font-family: 'Bai Jamjuree',sans-serif;
+}
+#footer-quick-link{
+    margin-top: 35px;
+    font-family: 'Bai Jamjuree',sans-serif;
+}
+#homeCar-bgImg{
+    background-image: url('Rectangle 15.png');
+    width: 100%;
+    position: relative;
+    background-repeat:repeat-y;
+}
+#homeCar-img-formCard{
+    margin-top: 30%;
+}
+#taxt-ownDrive-tourist{
+    color: #ffffff;
+    font-weight: 600;
+}
+#taxt-ownDrive-tourist:hover{
+    color: #000000;
+    background-color: #FF9D40;
+}
+hr.line1{
+    border-top: 2px solid #FF9D40;
+    margin-left: 50px;
+    width: 70%;
+}
+#taxi-ownDrive-tourist-Navbar{
+    position: absolute;
+    margin-left: 50px;
+    top: 8px;
+}
+#home-img-form{
+    display: grid;
+    row-gap: 20px;
+    width: 10px;
+    margin-left: 20%;
+    margin-top: 30px;
+    cursor: pointer;
+}
+#home-form-input-pickup{
+    background: transparent;
+    border: none;
+    color: #FF9D40;
+    font-weight: 600;
+    background-color: #ffffff;
+    opacity: 20%;
+    border-radius: 7px;
+}
+#home-form-input-drop{
+    background: transparent;
+    border: none;
+    color: #FF9D40;
+    font-weight: 600;
+    background-color: #ffffff;
+    opacity: 20%;
+    border-radius: 7px;
+}
+#need-taxi{
+    color: #ffffff;
+    font-family:'Bai Jamjuree',sans-serif ;
+    font-weight: 700;
+    font-size: 45px;
+    margin-top: 30%;
+    letter-spacing: 1px;
+    margin-left: 20px;
+}
+#here-for-you{
+    color: #FF9D40;
+    font-size: 25px;
+    font-family: 'bai jamjuree' sans-serif;
+}
+#home-form-btn{
+    background-color: #FF9D40;
+    color: #422425;
+}
+#home-form-btn:hover{
+    background-color: #422425;
+    color: #FFFFFF;
+}
+::placeholder{
+    color: #422425;
+}
+#four-col-card{
+    font-family: 'bai jamjuree',sans-serif;
+    color: black;
+    font-size: 15px;
+}
+.vr{
+    height: 30px;
+    top: 1px;
+    height: 30px;
+}
+#wht-luxury{
+    color: #FF9D40;
+    font-size: 30px;
+    font-family:'bai jamjuree',sans-serif;
+    font-weight: 700;
+}
+#wht-para{
+    color: #000000;
+    text-align:justify;
+}
+#our-services{
+    margin-left: 46px;
+    color: #FF9D40;
+    font-size: 36px;
+    font-weight: 600;
+    font-family: 'bai jamjuree',sans-serif;
+}
+#service-showMore-btn{
+    background-color: #FF9D40;
+    width: 10%;
+}
+#service-showMore-btn:hover{
+    color: #ffffff;
+    background-color: #422425;
+}
+#grp-card{
+    position: relative;
+}
+#violetman-card{
+    text-align: center;
+    padding:5px;
+}
+#passenger{
+    color: #FF9D40;
+}
+#blog-p-card{
+    text-align: justify;
+}
+#login-card{
+  display: none;
+  position: absolute;
+  margin-left: 18%;
+  top: 20%;
+  z-index: 4;
+}
+.form{
+    margin-left: 37%;
+}
+#form-submit-btn{
+    color: #422425;
+    background-color: #FF9D40;
+}
+#form-submit-btn:hover{
+    color: #ffffff;
+    background-color: #422425;
+}
+#form-card-body{
+    background-color: #c99d75;
+}
+#body{
+    position: relative;
+}
+#name-pass-email{
+    color: #422425;
+    font-size: 20px;
+}
+::placeholder{
+    color: #c99d75;
+}
+
+#name{
+    background-color: antiquewhite;
+}
+#pass{
+    background-color: antiquewhite;
+}
+#email{
+    background-color: antiquewhite;
+}
+#name:hover{
+    background-color: white;
+}
+#pass:hover{
+    background-color: white;
+}
+#email:hover{
+    background-color: white;
+}
+#form-remove-btn{
+    color: #422425;
+    background-color: #FF9D40;
+    font-weight: 600;
+    width: 10%;
+}
+#form-remove-btn:hover{
+    color: #ffffff;
+    background-color: #422425;
+}
+.nav-link:hover{
+    background-color: #422425;
+}
+#atagH:hover{
+    color: #ffffff;
+}
+#atagS:hover{
+    color: #ffffff;
+}
+#atagV:hover{
+    color: #ffffff;
+}
+#atagB:hover{
+    color: #ffffff;
+}
+#atagA:hover{
+    color: #ffffff;
+}
+#atagC:hover{
+    color: #ffffff;
+}
+#Q-link{
+    cursor: pointer;
+}
+#C-us{
+    cursor: pointer;
+}
+#S-media{
+    cursor: pointer;
+}
+#S-media:hover{
+    background-color: #422425;
+}
+@media screen and (max-width:990px){
+    .vr{
+        display: none !important;
+    }
+}

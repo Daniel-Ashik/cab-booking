@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calltaxi.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
+</head>
+
+<body id="body">
+    <div id="login-card">
+        <div class="d-flex justify-content-center">
+            <div class="card" style="width: 50rem;">
+                <div id="form-card-body" class="card-body">
+                    <form class="form">
+                        <div class="d-flex justify-content-end">
+                            <button id="form-remove-btn" class="border-0 rounded-4" onclick="removeLoginForm()">X</button>
+                        </div>
+                        <div class="mt-3">
+                            <label id="name-pass-email" class="fw-semibold" for="Username"><i class="fa-solid fa-user"></i>Name</label><br>
+                            <input id="name" class="border-0 rounded-3" type="text" placeholder="Enter Your Name" required>
+                        </div>
+                        <div class="mt-3">
+                            <label id="name-pass-email" class="fw-semibold" for="Password"><i class="fa-solid fa-lock"></i>Password</label><br>
+                            <input id="pass" class="border-0 rounded-3" type="password" placeholder="Enter Your Password" required>
+                        </div>
+                        <div class="mt-3">
+                            <label id="name-pass-email" class="fw-semibold" for="Email"><i class="fa-solid fa-envelope"></i>Email</label><br>
+                            <input id="email" class="border-0 rounded-3" type="email" placeholder="Enter Your Email" required>
+                        </div> 
+                         <div class="mt-3 ms-5">
+                            <button id="form-submit-btn" class="w-25 rounded-3 fw-semibold border-0" onclick="validateForm()">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="blurr">
+        <%- include ('navbar')%>
+        <div id="homeCar-bgImg">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div id="homeCar-img-formCard" class="d-flex justify-content-center">
+                        <div class="card rounded-5 border-0" style="width: 22rem;background: transparent;">
+                            <div class="card-body">
+                                <div id="taxi-ownDrive-tourist-Navbar" class="d-flex grid gap-3 justify-content-center">
+                                    <h6 id="taxt-ownDrive-tourist">Taxi</h6>
+                                    <h6 id="taxt-ownDrive-tourist">Own Drive</h6>
+                                    <h6 id="taxt-ownDrive-tourist">Tourist</h6>
+                                </div>
+                                <hr class="line1">
+                                <form id="home-img-form">
+                                    <div class="d-flex">
+                                        <input id="home-form-input-pickup" type="pickupPoint"
+                                            placeholder="Pickup Point"> <i
+                                            class="fa-solid text-white fa-location-crosshairs fs-5 mt-1 ms-1"></i>
+                                    </div>
+                                    <div class="d-flex">
+                                        <input id="home-form-input-drop" type="pickupPoint" placeholder="Drop Point"><i
+                                            class="fa-solid text-white fa-stopwatch fs-5 mt-1 ms-1"></i>
+                                    </div>
+                                    <div class="text-center">
+                                        <button id="home-form-btn" onclick="findRoute()"
+                                            class=" w-50 border-0 fw-semibold rounded-2">Search</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 px-lg-0 px-5">
+                    <div id="need-taxi" class="text-center">
+                        <span>Do You Need Taxi</span><br>
+                        <span id="here-for-you">We are here for you</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="card rounded-1" style="width: 72rem;">
+                <div id="four-col-card" class="card-body">
+                    <div class="row mt-3">
+                        <div class="col-lg-3 col-md-6 col-12 g-lg-0 g-3">
+                            <div class="d-flex justify-content-center">
+                                <img src="Vector(13).png">
+                                <span class="ms-2 mt-1">Best at this Price Range</span>
+                                <div class="vr ms-5"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 g-lg-0 g-3">
+                            <div class="d-flex justify-content-center">
+                                <img src="Vector(14).png">
+                                <span class="ms-2 mt-1">27/7 Customer Care Support</span>
+                                <div class="vr ms-3"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 g-lg-0 g-3">
+                            <div class="d-flex justify-content-center">
+                                <img src="Vector(15).png">
+                                <span class="ms-2 mt-1">Pick Up at Home Point</span>
+                                <div class="vr ms-5"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 g-lg-0 g-3">
+                            <div class="d-flex justify-content-center">
+                                <img src="Vector(16).png">
+                                <span class="ms-2 mt-1">Easy Booking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="row mt-5 p-5">
+                <div class="col-xl-6 col-lg-9 col-md-10 col-12">
+                    <div id="wht-luxury">
+                        <span>What is Luxury Ride &</span><br>
+                        <span>What We Do</span>
+                    </div>
+                    <div id="wht-para">
+                        <p>Lorem ipsum dolor sit amet consectetur. Odio ipsum at quam proin. Cum hac lorem nullam eu ac
+                            ornare fermentum. Nisi in ornare molestie blandit. Auctor quis quis ipsum tristique faucibus
+                            consectetur id quam tellus. Erat dictum ac elementum varius erat sagittis velit a. Consequat
+                            dictum vulputate sed eget egestas ultrices. At urna donec ultricies odio augue. Cursus purus
+                            pellentesque felis quis. Dictum ornare at nisl at. Tellus dui varius a integer sit eu et
+                            fringilla. Suspendisse pharetra duis consequat adipiscing eleifend tincidunt. Tortor sed
+                            porttitor vestibulum nascetur viverra vitae turpis leo eget. Cursus cursus mi non habitant
+                            vestibulum.
+                            Imperdiet sit dolor quis sem consectetur quis. In vulputate sem luctus imperdiet vitae nibh
+                            euismod vulputate. Placerat aenean proin ac viverra risus sed augue quis. Ullamcorper
+                            viverra at a interdum. Convallis imperdiet sit eleifend sed viverra vivamus commodo. Nibh
+                            porttitor turpis semper eleifend donec ullamcorper magna etiam felis. Id dictumst ac iaculis
+                            et. Turpis morbi tortor nulla bibendum dui posuere.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-9 col-md-10 col-12 mt-5">
+                    <img style="margin-top: 45px;" src="image 2(1).png">
+                </div>
+            </div>
+        </div>
+        <div id="our-services">
+            <p>Our Services</p>
+        </div>
+        <div class="d-flex justify-content-evenly">
+            <div class="card shadow border-0" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="d-flex justify-content-center mt-3">
+                        <img src="tax.png">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p class="fw-semibold fs-5 mt-2">Taxi</p>
+                    </div>
+                    <div>
+                        <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur. Pharetra nibh
+                            pellentesque sed ac sed. Malesuada aenean lorem consectetur vitae tincidunt. Aliquam leo sit
+                            sed dictum sit est orci. Arcu feugiat orci dictum etiam diam. Blandit non orci sit diam
+                            neque condimentum.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card shadow border-0" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="d-flex justify-content-center mt-3">
+                        <img width="45%" src="whitecar.png">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p class="fw-semibold fs-5 mt-2">Own Drive</p>
+                    </div>
+                    <div>
+                        <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur. Pharetra nibh
+                            pellentesque sed ac sed. Malesuada aenean lorem consectetur vitae tincidunt. Aliquam leo
+                            sit
+                            sed dictum sit est orci. Arcu feugiat orci dictum etiam diam. Blandit non orci sit diam
+                            neque condimentum.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card shadow border-0" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="d-flex justify-content-center mt-3">
+                        <img src="van.png">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p class="fw-semibold fs-5 mt-2">Tourist</p>
+                    </div>
+                    <div>
+                        <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur. Pharetra nibh
+                            pellentesque sed ac sed. Malesuada aenean lorem consectetur vitae tincidunt. Aliquam leo sit
+                            sed dictum sit est orci. Arcu feugiat orci dictum etiam diam. Blandit non orci sit diam
+                            neque condimentum.</p>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <div id="details" style="display: none;">
+            <div class="d-flex justify-content-evenly">
+                <div class="card shadow border-0" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center mt-3">
+                            <img width="40%" src="travelbus.png">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <p class="fw-semibold fs-5 mt-2">Bus</p>
+                        </div>
+                        <div>
+                            <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur. Pharetra nibh
+                                pellentesque sed ac sed. Malesuada aenean lorem consectetur vitae tincidunt. Aliquam leo
+                                sit
+                                sed dictum sit est orci. Arcu feugiat orci dictum etiam diam. Blandit non orci sit diam
+                                neque condimentum.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card shadow border-0" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center mt-3">
+                            <img width="45%" src="train.png">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <p class="fw-semibold fs-5 mt-2">Train</p>
+                        </div>
+                        <div>
+                            <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur. Pharetra nibh
+                                pellentesque sed ac sed. Malesuada aenean lorem consectetur vitae tincidunt. Aliquam leo
+                                sit
+                                sed dictum sit est orci. Arcu feugiat orci dictum etiam diam. Blandit non orci sit diam
+                                neque condimentum.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card shadow border-0" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center mt-3">
+                            <img width="40%" src="flight.png">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <p class="fw-semibold fs-5 mt-2">Flight</p>
+                        </div>
+                        <div>
+                            <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur. Pharetra nibh
+                                pellentesque sed ac sed. Malesuada aenean lorem consectetur vitae tincidunt. Aliquam leo
+                                sit
+                                sed dictum sit est orci. Arcu feugiat orci dictum etiam diam. Blandit non orci sit diam
+                                neque condimentum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5 d-flex justify-content-center">
+            <button id="service-showMore-btn" class="rounded-2 border-0 fw-semibold" onclick="Show()">Show More</button>
+        </div>
+
+        <div class="mt-5" id="our-services">
+            <p>What about Our Passanger Says</p>
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+            <div id="grp-card" class="card" style="width: 60rem;">
+                <div class="card-body">
+                    <div id="grp-card" class="card" style="width: 58rem;">
+                        <div class="card-body">
+                            <div id="grp-card" class="card" style="width: 56rem;">
+                                <div class="card-body">
+                                    <div id="grp-card" class="card" style="width: 54rem;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-center">
+                                                <img src="violetman.png">
+                                            </div>
+                                            <div id="violetman-card" class="mt-4">
+                                                <p>Lorem ipsum dolor sit amet consectetur. Imperdiet quisque sit
+                                                    facilisis commodo vestibulum lectus. Maecenas lectus dignissim est
+                                                    venenatis risus nascetur nibh. Non parturient pulvinar pretium
+                                                    pulvinar ac ullamcorper aliquam tortor magna. Praesent feugiat
+                                                    molestie sagittis purus habitasse mauris quis. Lacus purus urna
+                                                    interdum volutpat. Massa lobortis quis pretium elit et feugiat a
+                                                    sollicitudin proin. Felis est volutpat scelerisque enim. Felis nibh
+                                                    cursus cursus arcu lacus morbi aliquam. Tincidunt mattis hac mi
+                                                    egestas est. Dui cras ultrices facilisi tellus ut. Amet odio hac id
+                                                    aliquet eu dictum pretium duis.
+                                                    Velit gravida scelerisque mi elementum sodales elit sed. Arcu
+                                                    volutpat pretium lectus at facilisis amet nullam arcu enim. </p>
+                                            </div>
+                                            <div class="text-center">
+                                                <span class="fw-semibold fs-4">JOHN</span><br>
+                                                <span id="passenger" class="fw-semibold">Passenger</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5" id="our-services">
+            <p>Our Blogs</p>
+        </div>
+        <div class="row d-flex justify-content-around mt-5">
+            <div class="col-xl-3 col-lg-6 col-md-9 col-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="mobileycar.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold">Our Blogs</h5>
+                        <p id="blog-p-card">Lorem ipsum dolor sit amet consectetur. Mi tempus odio venenatis lacinia a
+                            pellentesque. Scelerisque cursus ac consequat nulla tellus viverra cras nec facilisi.
+                            Tristique pulvinar cras praesent ut non at. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-9 col-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="taxiycar.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold">Our Blogs</h5>
+                        <p id="blog-p-card">Lorem ipsum dolor sit amet consectetur. Mi tempus odio venenatis lacinia a
+                            pellentesque. Scelerisque cursus ac consequat nulla tellus viverra cras nec facilisi.
+                            Tristique pulvinar cras praesent ut non at. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-9 col-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="manycar.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold">Our Blogs</h5>
+                        <p id="blog-p-card">Lorem ipsum dolor sit amet consectetur. Mi tempus odio venenatis lacinia a
+                            pellentesque. Scelerisque cursus ac consequat nulla tellus viverra cras nec facilisi.
+                            Tristique pulvinar cras praesent ut non at. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include ('footer')%>
+    </div>
+</body>
+<script src="calltaxi.js"></script>
+</html>
